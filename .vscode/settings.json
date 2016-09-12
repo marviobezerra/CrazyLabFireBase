@@ -1,0 +1,17 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "editor.insertSpaces": false,
+    "files.exclude": {
+        ".firebaserc": true,
+        "database.rules.json": true,
+        "firebase.json": true,
+        "LICENSE": true,
+        "README.md": true,
+        "/**/.gitignore": true,
+        "/**/tsconfig.json": true,
+        "/**/typings.json": true,
+        "public": true,
+        "/**/node_modules": true,
+        "/**/typings": true
+    }
+}
