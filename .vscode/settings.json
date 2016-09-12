@@ -2,9 +2,9 @@
 {
     "editor.insertSpaces": false,
     "files.exclude": {
-        ".firebaserc": true,
-        "database.rules.json": true,
-        "firebase.json": true,
+        ".firebaserc": false,
+        "database.rules.json": false,
+        "firebase.json": false,
         "LICENSE": true,
         "README.md": true,
         "/**/.gitignore": true,
