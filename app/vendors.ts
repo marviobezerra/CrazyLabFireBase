@@ -9,6 +9,9 @@ import "@angular/forms";
 // Statics
 import "rxjs/add/observable/throw";
 
+import "angularfire2";
+import "firebase";
+
 // Operators
 import "rxjs/add/operator/catch";
 import "rxjs/add/operator/debounceTime";

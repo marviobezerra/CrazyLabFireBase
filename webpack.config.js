@@ -33,7 +33,7 @@ module.exports = {
                 loader: ExtractTextPlugin.extract("style-loader", "css-loader!postcss-loader!sass-loader")
             },
             {
-                exclude: /Styles/,
+                exclude: /styles/,
                 test: /\.scss$/,
                 loaders: ["raw-loader", "sass-loader?sourceMap"]
             },

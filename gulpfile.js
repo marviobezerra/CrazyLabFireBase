@@ -20,7 +20,6 @@ var helper = {
             html: "compile:html",
             ts: "compile:ts",
             options: {
-                dev: true,
                 watch: false,
                 deploy: false
             }
@@ -57,24 +56,17 @@ var helper = {
         port: 35719
     },
     webpack: function () {
-        var dev = helper.tasks.compile.options.dev;
-        var watch = helper.tasks.compile.options.watch;
-        var deploy = helper.tasks.compile.options.deploy;
-
         var result = Object.create(require("./webpack.config.js"));
 
-        if (dev === true) {
-            result.devtool = "source-map";
-        }
-
-        if (watch === true) {
+        if (helper.tasks.compile.options.watch === true) {
+            result.debug = true;            
+            result.devtool = "source-map";            
             result.watch = true;
             result.plugins = result.plugins || [];
             result.plugins.push(helper.webPackLog);
         }
 
-        if (deploy === true) {
-            result.debug = false;
+        if (helper.tasks.compile.options.deploy === true) {
             result.plugins = result.plugins || [];
             result.plugins.push(new webpack.NoErrorsPlugin());
             result.plugins.push(new webpack.optimize.DedupePlugin());
@@ -138,7 +130,6 @@ gulp.task(helper.tasks.compile.ts, function () {
 
 gulp.task(helper.tasks.compile.deploy, function () {
 
-    helper.tasks.compile.options.debug = false;
     helper.tasks.compile.options.watch = false;
     helper.tasks.compile.options.deploy = true;
 
