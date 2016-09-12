@@ -1,9 +1,10 @@
 {
-  "name": "CrazyLabFireBase",
+  "name": "crazylabfirebase",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "deploy": "gulp compile:deploy && firebase deploy",
     "postinstall": "typings install"
   },
   "repository": {
