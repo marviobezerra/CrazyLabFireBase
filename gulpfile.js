@@ -10,9 +10,8 @@ var gulp = require("gulp"),
     runSequence = require("run-sequence"),
     replace = require("gulp-replace");
 
-// change 01
-// change 02
-// change 03
+// add function A
+// add function B
 
 var helper = {
     tasks: {
