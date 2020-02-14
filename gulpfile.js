@@ -10,9 +10,6 @@ var gulp = require("gulp"),
     runSequence = require("run-sequence"),
     replace = require("gulp-replace");
 
-// add function A
-// add function B
-
 var helper = {
     tasks: {
         clear: "clear",
@@ -165,4 +162,6 @@ gulp.task(helper.tasks.watch, function () {
         [helper.tasks.compile.html, helper.tasks.compile.ts, helper.tasks.compile.server]);
 });
 
-// prob 01
+// Justin changes 01
+// Justin changes 02
+// Justin changes 03
